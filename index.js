@@ -16,5 +16,10 @@ app.use(mainRoutes)
 app.use(writeRoutes)
 app.use(viewRoutes)
 
+app.use((req, res, next) => {
+    res.status(404)
+    res.end('<h1>404 Error</h1>')
+})
+
 const PORT = process.env.PORT || 8000
 app.listen(PORT, () => console.log(`Server has started on port ${PORT}....`))
