@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEUST BOOK</title>
+</head>
+<body>
+    <a href="/"><button>HOME</button></a>
+    <a href="/write"><button>WRITE NOTE</button></a>
+    <a href="/view"><button>REVIEW NOTE</button></a>
+
+
+    <h1>Review the Geust book</h1>
+    <ul>
+        <% for(let i=0; i<notes.length; i++){ %>
+            <li>
+                <%= notes[i].note %>
+            </li>
+        <% } %>
+    </ul>    
+</body>
+</html>
