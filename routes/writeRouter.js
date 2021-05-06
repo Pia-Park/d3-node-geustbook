@@ -17,7 +17,7 @@ router.post('/write', (req, res, next) => {
         note: req.body.note
     })
     fs.writeFile(path.join(__dirname, '..','notes.json'), JSON.stringify(data, null, 2), () => {
-        res.status(302).redirect('/view')
+        res.status(302).redirect('/')
     })
 })
 
